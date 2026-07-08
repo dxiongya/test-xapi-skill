@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "skills": [
+    {
+      "slug": "twitter-research",
+      "name": "Twitter Research",
+      "version": "0.1.0",
+      "path": "skills/twitter-research",
+      "publishedAt": null,
+      "normalizedSha256": null
+    },
+    {
+      "slug": "xapi-skill-creator",
+      "name": "xAPI Skill Creator",
+      "version": "0.1.0",
+      "path": "skills/xapi-skill-creator",
+      "publishedAt": null,
+      "normalizedSha256": null
+    }
+  ]
+}

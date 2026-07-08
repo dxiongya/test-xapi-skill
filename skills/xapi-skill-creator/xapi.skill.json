@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "2026-07-01",
+  "slug": "xapi-skill-creator",
+  "version": "0.1.0",
+  "license": "MIT",
+  "categories": ["developer-tools", "skills"],
+  "tags": ["xapi", "skill-market", "creator", "agent"],
+  "supportedAgents": ["codex", "claude-code", "universal"],
+  "riskLevel": "medium",
+  "apiKey": {
+    "requiredForRemoteSubmission": true,
+    "header": "XAPI-KEY",
+    "scopes": ["skill:read", "skill:submit"]
+  },
+  "operations": {
+    "create": "Supported through API-key inline or GitHub URL submission; the backend upserts the skill from the manifest.",
+    "update": "Supported by submitting a new immutable version with the same slug and a bumped semver.",
+    "upload": "Supported as inline files or public GitHub URL through the API-key flow; zip upload is available through the authenticated page flow.",
+    "delete": "Not available in the MVP API-key flow; prepare an admin/product deprecation request until a dedicated endpoint exists."
+  },
+  "xapiDependencies": [
+    {
+      "type": "endpoint",
+      "serviceSlug": "xapi-skill-market",
+      "endpointKey": "skills.agent.spec",
+      "required": false,
+      "purpose": "Read the current skill package constraints and API-key scopes."
+    },
+    {
+      "type": "endpoint",
+      "serviceSlug": "xapi-skill-market",
+      "endpointKey": "skills.agent.submissions.inline",
+      "required": false,
+      "purpose": "Submit local skill files with an xAPI API key."
+    },
+    {
+      "type": "endpoint",
+      "serviceSlug": "xapi-skill-market",
+      "endpointKey": "skills.agent.submissions.github",
+      "required": false,
+      "purpose": "Submit a public GitHub repository or tree URL for review."
+    },
+    {
+      "type": "endpoint",
+      "serviceSlug": "xapi-skill-market",
+      "endpointKey": "skills.agent.submission.status",
+      "required": false,
+      "purpose": "Check review and publish status for submitted skill versions."
+    }
+  ],
+  "permissions": {
+    "network": ["api.xapi.to", "xapi.to", "github.com"],
+    "writesExternalState": true,
+    "mayChargeUserBalance": false,
+    "handlesPersonalData": false
+  },
+  "examples": [
+    {
+      "title": "Create a new skill",
+      "prompt": "Create a marketplace skill for our Twitter research workflow and write the xapi.skill.json manifest."
+    },
+    {
+      "title": "Submit by API key",
+      "prompt": "Validate this skill folder and submit it to xAPI with my configured API key."
+    },
+    {
+      "title": "Import from GitHub",
+      "prompt": "Submit this public GitHub skill URL to the xAPI Skill Marketplace review pipeline."
+    }
+  ]
+}
