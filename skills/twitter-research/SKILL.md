@@ -1,6 +1,28 @@
 ---
 name: Twitter Research
 description: Research a public Twitter/X profile and its recent activity through xAPI. Use this when the user asks to look up an X/Twitter user, summarize a profile, or review someone's recent public posts and engagement.
+version: 0.1.0
+metadata:
+  xapi:
+    categories: [social, research]
+    tags: [twitter, x, profile, research]
+    dependencies:
+      - service: twitter
+        endpoint: twitter.user_by_screen_name
+        required: true
+        purpose: Resolve a public Twitter/X profile by screen name before reading its timeline.
+      - service: twitter
+        endpoint: twitter.user_tweets
+        required: true
+        purpose: Read recent public tweets for the resolved profile to summarize activity.
+    permissions:
+      spendsCredits: true
+      personalData: false
+    examples:
+      - title: Profile research
+        prompt: Research @openai and summarize the last 7 days of public activity.
+      - title: Quick who-is
+        prompt: Who is @paulg? Give me their bio, follower count, and recent themes.
 ---
 
 # Twitter Research

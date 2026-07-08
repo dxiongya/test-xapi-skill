@@ -17,6 +17,30 @@
       "path": "skills/xapi-capability-planner",
       "publishedAt": null,
       "normalizedSha256": null
+    },
+    {
+      "slug": "reddit-digest",
+      "name": "Reddit Digest",
+      "version": "0.1.0",
+      "path": "skills/reddit-digest",
+      "publishedAt": null,
+      "normalizedSha256": null
+    },
+    {
+      "slug": "polymarket-odds",
+      "name": "Polymarket Odds",
+      "version": "0.1.0",
+      "path": "skills/polymarket-odds",
+      "publishedAt": null,
+      "normalizedSha256": null
+    },
+    {
+      "slug": "linkedin-lookup",
+      "name": "LinkedIn Lookup",
+      "version": "0.1.0",
+      "path": "skills/linkedin-lookup",
+      "publishedAt": null,
+      "normalizedSha256": null
     }
   ]
 }

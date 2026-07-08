@@ -1,6 +1,28 @@
 ---
 name: xapi-capability-planner
 description: Discover, compare, and plan xAPI capability usage for an agent task. Use this skill when the user wants to find which xAPI API, action, capability, or endpoint can solve a goal; combine multiple xAPI calls into a workflow; estimate call risks or balance impact; or produce executable xapi CLI/API call examples without hand-searching the whole marketplace.
+version: 0.1.0
+metadata:
+  xapi:
+    categories: [developer-tools, agent-workflows]
+    tags: [xapi, capabilities, actions, planning, agent]
+    dependencies:
+      - service: xapi
+        endpoint: xapi.capabilities.search
+        required: false
+        purpose: Search available xAPI capabilities and actions to match a user's goal before planning calls.
+      - service: xapi
+        endpoint: xapi.actions.describe
+        required: false
+        purpose: Inspect an action's inputs, outputs, and usage constraints before composing a call chain.
+    permissions:
+      spendsCredits: true
+      personalData: false
+    examples:
+      - title: Find the right xAPI capability
+        prompt: Which xAPI action should I use to research a Twitter/X profile and summarize recent posts?
+      - title: Plan a multi-step workflow
+        prompt: Plan an xAPI call chain that resolves a handle then reads its recent posts.
 ---
 
 # xAPI Capability Planner
