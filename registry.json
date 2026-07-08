@@ -11,10 +11,10 @@
       "normalizedSha256": null
     },
     {
-      "slug": "xapi-skill-creator",
-      "name": "xAPI Skill Creator",
+      "slug": "xapi-capability-planner",
+      "name": "xAPI Capability Planner",
       "version": "0.1.0",
-      "path": "skills/xapi-skill-creator",
+      "path": "skills/xapi-capability-planner",
       "publishedAt": null,
       "normalizedSha256": null
     }

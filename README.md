@@ -14,7 +14,7 @@ skills/<slug>/
 ## Skills
 
 - **twitter-research** — research a public Twitter/X profile and recent activity through xAPI.
-- **xapi-skill-creator** — create, validate, package, and submit xAPI Skill Marketplace skills.
+- **xapi-capability-planner** — discover, compare, and plan xAPI capabilities for an agent task.
 
 ## Import into the marketplace
 
@@ -25,5 +25,5 @@ https://github.com/dxiongya/test-xapi-skill/tree/main/skills/twitter-research
 ```
 
 ```
-https://github.com/dxiongya/test-xapi-skill/tree/main/skills/xapi-skill-creator
+https://github.com/dxiongya/test-xapi-skill/tree/main/skills/xapi-capability-planner
 ```
